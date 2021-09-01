@@ -17,4 +17,7 @@ let obj = {
     ability: [{age: 15}, {name: '张三'}]
   }
 }
-console.log(deepCopy(obj))
+
+let newObj = deepCopy(obj);
+console.log(newObj.property.ability === obj.property.ability)
+

@@ -54,13 +54,20 @@
       let args = arguments;
       if (timeout) clearTimeout(timeout);
       if (immediate) {
-        let now = +new Date();
-        // 没有定时器，首次执行
-        if (now - previous > wait) {
+        let rightNow = !timeout;
+        timeout = setTimeout(() => {
+          // func.apply(context, args);
+          timeout = null;
+        }, wait)
+        if (rightNow) {
           func.apply(context, args);
-          console.log('立即执行');
-          previous = now;
         }
+        // let now = +new Date();
+        // // 没有定时器，首次执行
+        // if (now - previous > wait) {
+        //   func.apply(context, args);
+        // }
+        // previous = now;
       } else {
         timeout = setTimeout(function () {
           func.apply(context, args);
