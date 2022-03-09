@@ -3,6 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <title>Title</title>
+  <script type="module">
+    import hello from './test'
+    console.log(hello);
+  </script>
+
   <style>
       body {
           background-color: #666666;
@@ -42,11 +47,13 @@
   let count = 0;
   const moveFunction = function () {
     container.innerText = count++;
+    console.log(this);
   }
-  container.onmousemove = throttle(moveFunction, 1000);
+  // 实际上onclick执行的是throttle返回的函数,所以返回的匿名函数中的this指向container
+  container.onclick = throttle(moveFunction, 1000); // 正常使用时，onclick后面函数中的this也是指向container的
 
   // 使用时间戳实现
-  function throttle(func, wait) {
+  function throttle(func, wait) { // 调用
     let previous = 0;
     return function () {
       let context = this;

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<!--  <meta name="viewport" content="width=device-width,initial-scale=3,maximum-scale=3,minimum-scale=3">-->
+  <title>Title</title>
+  <meta>
+  <style>
+      p {
+          display: -webkit-box;
+          -webkit-box-orient: vertical;
+          -webkit-line-clamp: 3;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          width: 280px;
+          word-wrap: break-word;
+          border: 1px solid #cccccc;
+          padding: 20px;
+      }
+
+      p::after {
+          content: '';
+          display: block;
+          position: absolute;
+          left: 100px;
+          top: 11px;
+          width: 8px;
+          height: 8px;
+          background-color: #fff;
+          border: 1px solid #cccccc;
+          border-right: none;
+          border-bottom: none;
+          transform: rotate(45deg);
+      }
+  </style>
+</head>
+<body>
+<p style="display: none">
+  23142152142514251421512222222222222222211111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111221111111111111111111111111111111111111111111111111111111111111111111111111111111111111
+</p>
+<div style="width:100px;height:100px;background-color:#333;margin: auto">
+</div>
+</body>
+</html>

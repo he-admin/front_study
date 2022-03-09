@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <style>
+      .left {
+          /*float: left;*/
+          width: 200px;
+          background-color: #cccccc;
+      }
+
+      .right {
+          overflow: hidden;
+          background-color: #f40;
+          height: 100%;
+      }
+
+      .left, .right {
+          display: table-cell;
+          word-break: break-word;
+      }
+
+      .wrapper {
+          display: table;
+          table-layout: fixed;
+      }
+
+  </style>
+</head>
+<body>
+<div class="wrapper">
+  <div class="left">122222222222222222222121341321423142314231423142341341321113214324343431241231</div>
+  <div class="right">
+    135666666666666666666666555555751735163517234132412341321434123143142134132142341321432121e5124152142112441541221415411416221412112464
+  </div>
+</div>
+
+</body>
+</html>

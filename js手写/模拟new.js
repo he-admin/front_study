@@ -15,5 +15,5 @@ function Person(name, age) {
   // 也可以主动更改如 return {},则this指向这个空对象
 }
 
-let person = mockNew(Person, '张三', 18);
+let person = mockNew(Person,'张三', 18);
 console.log(person);
